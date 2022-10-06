@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/ebrahim/Ewaste_robot/src/abb/abb_driver/include/**",
+        "/home/ebrahim/Ewaste_robot/src/abb/abb_robot_driver/abb_egm_hardware_interface/include/**",
+        "/home/ebrahim/Ewaste_robot/src/abb/abb_robot_driver/abb_egm_state_controller/include/**",
+        "/home/ebrahim/Ewaste_robot/src/abb/abb_robot_driver/abb_robot_cpp_utilities/include/**",
+        "/home/ebrahim/Ewaste_robot/src/abb/abb_robot_driver/abb_rws_service_provider/include/**",
+        "/home/ebrahim/Ewaste_robot/src/abb/abb_robot_driver/abb_rws_state_publisher/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

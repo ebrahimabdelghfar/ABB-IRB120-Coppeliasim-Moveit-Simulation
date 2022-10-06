@@ -1,0 +1,17 @@
+controller_list:
+  - name: fake_joint_group_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+  - name: fake_screw_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - drive_joint
+initial:  # Define initial robot poses per group
+  - group: joint_group
+    pose: home

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="abb_irb_sim_v2">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="8.0125E-05 0.079637 -0.042039" rpy="0 0 0" />
+            <mass value="6.215" />
+            <inertia ixx="0.027034" ixy="5.643E-06" ixz="2.5783E-05" iyy="0.025199" iyz="-0.00023168" izz="0.024621" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link1">
+        <inertial>
+            <origin xyz="9.7628E-05 0.083412 0.00011931" rpy="0 0 0" />
+            <mass value="3.067" />
+            <inertia ixx="0.012269" ixy="3.8445E-08" ixz="7.1775E-08" iyy="0.01042" iyz="1.0259E-05" izz="0.012436" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint1" type="continuous">
+        <origin xyz="0 0 0.155" rpy="1.5708 0 -1.5446" />
+        <parent link="base_link" />
+        <child link="link1" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="link2">
+        <inertial>
+            <origin xyz="0.00077828 0.10124 0.002117" rpy="0 0 0" />
+            <mass value="3.9087" />
+            <inertia ixx="0.038127" ixy="-2.3788E-07" ixz="-6.4579E-07" iyy="0.0047265" iyz="2.4476E-05" izz="0.040578" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint2" type="continuous">
+        <origin xyz="0 0.135 0" rpy="0 0 0.021965" />
+        <parent link="link1" />
+        <child link="link2" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="link3">
+        <inertial>
+            <origin xyz="0.022808 0.057911 -0.0010643" rpy="0 0 0" />
+            <mass value="2.9437" />
+            <inertia ixx="0.0056396" ixy="-0.0031992" ixz="-0.00012136" iyy="0.0109" iyz="-0.00011295" izz="0.012202" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint3" type="continuous">
+        <origin xyz="0 0.27 0" rpy="0 0 -0.005539" />
+        <parent link="link2" />
+        <child link="link3" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="link4">
+        <inertial>
+            <origin xyz="0.081241 0.00040558 -0.00015344" rpy="0 0 0" />
+            <mass value="1.3279" />
+            <inertia ixx="0.0010444" ixy="5.6973E-06" ixz="4.6406E-05" iyy="0.0033558" iyz="-8.382E-07" izz="0.0038844" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint4" type="continuous">
+        <origin xyz="0.14346 0.07 0" rpy="7.0345E-05 0 0" />
+        <parent link="link3" />
+        <child link="link4" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="link5">
+        <inertial>
+            <origin xyz="-0.001095 6.2236E-05 -3.6872E-05" rpy="0 0 0" />
+            <mass value="0.54663" />
+            <inertia ixx="0.00040458" ixy="-4.2555E-07" ixz="1.8448E-06" iyy="0.00029001" iyz="-8.6564E-09" izz="0.00036748" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint5" type="continuous">
+        <origin xyz="0.15854 0 0" rpy="0 0 -0.016426" />
+        <parent link="link4" />
+        <child link="link5" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="link6">
+        <inertial>
+            <origin xyz="-1.3237E-06 0.00016958 0.0069846" rpy="0 0 0" />
+            <mass value="0.013678" />
+            <inertia ixx="1.6577E-06" ixy="-3.0637E-12" ixz="8.915E-11" iyy="1.6943E-06" iyz="-7.6625E-09" izz="2.9768E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link6.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/link6.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint6" type="continuous">
+        <origin xyz="0.057953 0 0" rpy="-1.5708 -7.0335E-05 -1.5708" />
+        <parent link="link5" />
+        <child link="link6" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="fixed_sys">
+        <inertial>
+            <origin xyz="0.00089725 0.01851 -0.060073" rpy="0 0 0" />
+            <mass value="0.51901" />
+            <inertia ixx="0.00036548" ixy="1.6959E-06" ixz="-6.2933E-06" iyy="0.00040991" iyz="2.2459E-05" izz="0.00030992" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/fixed_sys.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/fixed_sys.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="fixed_joint" type="fixed">
+        <origin xyz="0 0 0.014047" rpy="-3.1416 0 -1.5708" />
+        <parent link="link6" />
+        <child link="fixed_sys" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="screw_drive">
+        <inertial>
+            <origin xyz="8.1778E-09 -7.8827E-09 -0.030704" rpy="0 0 0" />
+            <mass value="0.00090795" />
+            <inertia ixx="3.8117E-07" ixy="5.4391E-15" ixz="1.8191E-13" iyy="3.8124E-07" iyz="-1.7852E-13" izz="2.2606E-09" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/screw_drive.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_irb_sim_v2/meshes/screw_drive.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="drive_joint" type="continuous">
+        <origin xyz="0 0 -0.12407" rpy="0 0 0.69934" />
+        <parent link="fixed_sys" />
+        <child link="screw_drive" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <transmission name="trans_joint1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint5">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint5_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint6">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint6">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint6_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_drive_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="drive_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="drive_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

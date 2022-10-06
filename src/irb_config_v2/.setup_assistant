@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: abb_irb_sim_v2
+    relative_path: urdf/abb_irb_sim_v2.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/abb_irb_sim_v2.srdf
+  CONFIG:
+    author_name: ebrahim_abdelghfar
+    author_email: ebrahimabdelghfar550@gmail.com
+    generated_timestamp: 1665006465
