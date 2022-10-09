@@ -1,0 +1,561 @@
+<mujoco model="coppeliaSim">
+    <compiler coordinate="local" angle="radian" usethread="true" balanceinertia="true" boundmass="0" boundinertia="1e-06"/>
+    <visual/>
+    <size njmax="5000" nconmax="2000" nstack="-1"/>
+    <default>
+        <geom rgba="0.800000 0.600000 0.400000 1.000000"/>
+    </default>
+    <option timestep="0.005" impratio="1" wind="0.000000 0.000000 0.000000" density="0" viscosity="0" o_margin="0" o_solref="0.020000 1.000000" o_solimp="0.900000 0.950000 0.000000 0.000000 0.000000" integrator="Euler" cone="pyramidal" solver="Newton" iterations="100" gravity="0.000000 0.000000 -9.810000">
+        <flag filterparent="disable" fwdinv="disable" multiccd="disable" override="disable"/>
+    </option>
+    <worldbody>
+        <light pos="0.000000 0.000000 2.000000" dir="0.000000 -1.000000 -1.000000" diffuse="1 1 1"/>
+        <light pos="1.000000 1.000000 2.000000" dir="-1.000000 -1.000000 -1.000000" diffuse="1 1 1"/>
+        <body name="base_link_respondable__25__staticCounterpart" pos="0.000000 0.000000 0.081833" quat="0.516551 -0.479500 -0.505668 -0.497549" mocap="true"/>
+        <body name="base_link_respondable__25__" pos="0.000000 0.000000 0.081833" quat="0.516551 -0.479500 -0.505668 -0.497549">
+            <freejoint name="base_link_respondable__25__freejoint"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__0" type="mesh" mesh="base_link_respondable__25__0"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__1" type="mesh" mesh="base_link_respondable__25__1"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__2" type="mesh" mesh="base_link_respondable__25__2"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__3" type="mesh" mesh="base_link_respondable__25__3"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__4" type="mesh" mesh="base_link_respondable__25__4"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__5" type="mesh" mesh="base_link_respondable__25__5"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__6" type="mesh" mesh="base_link_respondable__25__6"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__7" type="mesh" mesh="base_link_respondable__25__7"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__8" type="mesh" mesh="base_link_respondable__25__8"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__9" type="mesh" mesh="base_link_respondable__25__9"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__10" type="mesh" mesh="base_link_respondable__25__10"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__11" type="mesh" mesh="base_link_respondable__25__11"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__12" type="mesh" mesh="base_link_respondable__25__12"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__13" type="mesh" mesh="base_link_respondable__25__13"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__14" type="mesh" mesh="base_link_respondable__25__14"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__15" type="mesh" mesh="base_link_respondable__25__15"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__16" type="mesh" mesh="base_link_respondable__25__16"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__17" type="mesh" mesh="base_link_respondable__25__17"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__18" type="mesh" mesh="base_link_respondable__25__18"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__19" type="mesh" mesh="base_link_respondable__25__19"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__20" type="mesh" mesh="base_link_respondable__25__20"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__21" type="mesh" mesh="base_link_respondable__25__21"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__22" type="mesh" mesh="base_link_respondable__25__22"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__23" type="mesh" mesh="base_link_respondable__25__23"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__24" type="mesh" mesh="base_link_respondable__25__24"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__25" type="mesh" mesh="base_link_respondable__25__25"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__26" type="mesh" mesh="base_link_respondable__25__26"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__27" type="mesh" mesh="base_link_respondable__25__27"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__28" type="mesh" mesh="base_link_respondable__25__28"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__29" type="mesh" mesh="base_link_respondable__25__29"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__30" type="mesh" mesh="base_link_respondable__25__30"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__31" type="mesh" mesh="base_link_respondable__25__31"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__32" type="mesh" mesh="base_link_respondable__25__32"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__33" type="mesh" mesh="base_link_respondable__25__33"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__34" type="mesh" mesh="base_link_respondable__25__34"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__35" type="mesh" mesh="base_link_respondable__25__35"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="base_link_respondable__25__36" type="mesh" mesh="base_link_respondable__25__36"/>
+            <inertial mass="1000" pos="-0.124454 0.002001 0.018089" quat="0.592506 0.388474 0.412081 0.572900" diaginertia="1.000000 1.000000 1.000000"/>
+            <body name="link1_respondable__27__" pos="0.173802 0.000645 -0.053152" quat="0.713707 0.700286 -0.007526 0.012856">
+                <joint solreflimit="0.020000 1.000000" solimplimit="0.900000 0.950000 0.001000 0.500000 2.000000" solreffriction="0.020000 1.000000" solimpfriction="0.900000 0.950000 0.001000 0.500000 2.000000" stiffness="0" damping="0" springref="0" armature="0.02" margin="0" name="joint1__16__" type="hinge" limited="false" ref="0" pos="-0.099025 0.000235 0.000003" axis="1.000000 0.000003 -0.000003"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__0" type="mesh" mesh="link1_respondable__27__0"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__1" type="mesh" mesh="link1_respondable__27__1"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__2" type="mesh" mesh="link1_respondable__27__2"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__3" type="mesh" mesh="link1_respondable__27__3"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__4" type="mesh" mesh="link1_respondable__27__4"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__5" type="mesh" mesh="link1_respondable__27__5"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__6" type="mesh" mesh="link1_respondable__27__6"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__7" type="mesh" mesh="link1_respondable__27__7"/>
+                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link1_respondable__27__8" type="mesh" mesh="link1_respondable__27__8"/>
+                <inertial mass="3.067" pos="-0.015613 0.000138 0.000122" quat="0.707112 -0.001648 0.001952 -0.707097" diaginertia="0.012269 0.010420 0.012436"/>
+                <body name="link2_respondable__29__" pos="0.157482 0.012660 0.001174" quat="0.523902 0.527022 -0.474883 -0.471446">
+                    <joint solreflimit="0.020000 1.000000" solimplimit="0.900000 0.950000 0.001000 0.500000 2.000000" solreffriction="0.020000 1.000000" solimpfriction="0.900000 0.950000 0.001000 0.500000 2.000000" stiffness="0" damping="0" springref="0" armature="0.02" margin="0" name="joint2__17__" type="hinge" limited="false" ref="0" pos="-0.000336 -0.000373 0.122145" axis="0.000655 0.999979 -0.006534"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__0" type="mesh" mesh="link2_respondable__29__0"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__1" type="mesh" mesh="link2_respondable__29__1"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__2" type="mesh" mesh="link2_respondable__29__2"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__3" type="mesh" mesh="link2_respondable__29__3"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__4" type="mesh" mesh="link2_respondable__29__4"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__5" type="mesh" mesh="link2_respondable__29__5"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__6" type="mesh" mesh="link2_respondable__29__6"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__7" type="mesh" mesh="link2_respondable__29__7"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__8" type="mesh" mesh="link2_respondable__29__8"/>
+                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link2_respondable__29__9" type="mesh" mesh="link2_respondable__29__9"/>
+                    <inertial mass="3.9087" pos="0.008801 0.001079 0.021303" quat="0.703935 -0.709061 -0.029171 -0.029276" diaginertia="0.038127 0.004726 0.040578"/>
+                    <body name="link3_respondable__31__" pos="0.059625 -0.004479 -0.190073" quat="-0.492644 0.510568 0.508301 -0.488111">
+                        <joint solreflimit="0.020000 1.000000" solimplimit="0.900000 0.950000 0.001000 0.500000 2.000000" solreffriction="0.020000 1.000000" solimpfriction="0.900000 0.950000 0.001000 0.500000 2.000000" stiffness="0" damping="0" springref="0" armature="0.02" margin="0" name="joint3__18__" type="hinge" limited="false" ref="0" pos="0.002182 -0.044545 0.036011" axis="0.999942 0.008690 0.006436"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__0" type="mesh" mesh="link3_respondable__31__0"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__1" type="mesh" mesh="link3_respondable__31__1"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__2" type="mesh" mesh="link3_respondable__31__2"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__3" type="mesh" mesh="link3_respondable__31__3"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__4" type="mesh" mesh="link3_respondable__31__4"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__5" type="mesh" mesh="link3_respondable__31__5"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__6" type="mesh" mesh="link3_respondable__31__6"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__7" type="mesh" mesh="link3_respondable__31__7"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__8" type="mesh" mesh="link3_respondable__31__8"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__9" type="mesh" mesh="link3_respondable__31__9"/>
+                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link3_respondable__31__10" type="mesh" mesh="link3_respondable__31__10"/>
+                        <inertial mass="2.9437" pos="0.000791 0.012140 0.010322" quat="0.712782 0.055105 0.664941 0.216236" diaginertia="0.004125 0.012423 0.012193"/>
+                        <body name="link4_respondable__33__" pos="0.004324 0.019431 -0.213225" quat="0.710705 -0.013721 -0.028863 -0.702764">
+                            <joint solreflimit="0.020000 1.000000" solimplimit="0.900000 0.950000 0.001000 0.500000 2.000000" solreffriction="0.020000 1.000000" solimpfriction="0.900000 0.950000 0.001000 0.500000 2.000000" stiffness="0" damping="0" springref="0" armature="0.02" margin="0" name="joint4__19__" type="hinge" limited="false" ref="0" pos="0.007407 0.000401 0.102204" axis="-0.010188 -0.014771 -0.999839"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__0" type="mesh" mesh="link4_respondable__33__0"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__1" type="mesh" mesh="link4_respondable__33__1"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__2" type="mesh" mesh="link4_respondable__33__2"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__3" type="mesh" mesh="link4_respondable__33__3"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__4" type="mesh" mesh="link4_respondable__33__4"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__5" type="mesh" mesh="link4_respondable__33__5"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__6" type="mesh" mesh="link4_respondable__33__6"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__7" type="mesh" mesh="link4_respondable__33__7"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__8" type="mesh" mesh="link4_respondable__33__8"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__9" type="mesh" mesh="link4_respondable__33__9"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__10" type="mesh" mesh="link4_respondable__33__10"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__11" type="mesh" mesh="link4_respondable__33__11"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__12" type="mesh" mesh="link4_respondable__33__12"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__13" type="mesh" mesh="link4_respondable__33__13"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__14" type="mesh" mesh="link4_respondable__33__14"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__15" type="mesh" mesh="link4_respondable__33__15"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__16" type="mesh" mesh="link4_respondable__33__16"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__17" type="mesh" mesh="link4_respondable__33__17"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__18" type="mesh" mesh="link4_respondable__33__18"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__19" type="mesh" mesh="link4_respondable__33__19"/>
+                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link4_respondable__33__20" type="mesh" mesh="link4_respondable__33__20"/>
+                            <inertial mass="1.3279" pos="0.006173 -0.000951 0.020982" quat="-0.491157 0.504862 -0.510571 -0.493149" diaginertia="0.001044 0.003356 0.003885"/>
+                            <body name="link5_respondable__35__" pos="0.005814 -0.002279 -0.056472" quat="-0.004776 -0.677719 -0.735305 0.001218">
+                                <joint solreflimit="0.020000 1.000000" solimplimit="0.900000 0.950000 0.001000 0.500000 2.000000" solreffriction="0.020000 1.000000" solimpfriction="0.900000 0.950000 0.001000 0.500000 2.000000" stiffness="0" damping="0" springref="0" armature="0.02" margin="0" name="joint5__20__" type="hinge" limited="false" ref="0" pos="0.000337 0.000006 -0.000164" axis="0.996472 0.083669 0.006548"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__0" type="mesh" mesh="link5_respondable__35__0"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__1" type="mesh" mesh="link5_respondable__35__1"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__2" type="mesh" mesh="link5_respondable__35__2"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__3" type="mesh" mesh="link5_respondable__35__3"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__4" type="mesh" mesh="link5_respondable__35__4"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__5" type="mesh" mesh="link5_respondable__35__5"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__6" type="mesh" mesh="link5_respondable__35__6"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__7" type="mesh" mesh="link5_respondable__35__7"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__8" type="mesh" mesh="link5_respondable__35__8"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__9" type="mesh" mesh="link5_respondable__35__9"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__10" type="mesh" mesh="link5_respondable__35__10"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__11" type="mesh" mesh="link5_respondable__35__11"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__12" type="mesh" mesh="link5_respondable__35__12"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__13" type="mesh" mesh="link5_respondable__35__13"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__14" type="mesh" mesh="link5_respondable__35__14"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__15" type="mesh" mesh="link5_respondable__35__15"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__16" type="mesh" mesh="link5_respondable__35__16"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__17" type="mesh" mesh="link5_respondable__35__17"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__18" type="mesh" mesh="link5_respondable__35__18"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__19" type="mesh" mesh="link5_respondable__35__19"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__20" type="mesh" mesh="link5_respondable__35__20"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__21" type="mesh" mesh="link5_respondable__35__21"/>
+                                <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link5_respondable__35__22" type="mesh" mesh="link5_respondable__35__22"/>
+                                <inertial mass="0.54663" pos="0.000313 -0.000059 -0.001259" quat="-0.027303 0.721449 0.031824 0.691197" diaginertia="0.000405 0.000290 0.000367"/>
+                                <body name="link6_respondable__37__" pos="-0.000081 0.000024 0.065335" quat="-0.552412 -0.437653 0.555927 -0.440733">
+                                    <joint solreflimit="0.020000 1.000000" solimplimit="0.900000 0.950000 0.001000 0.500000 2.000000" solreffriction="0.020000 1.000000" solimpfriction="0.900000 0.950000 0.001000 0.500000 2.000000" stiffness="0" damping="0" springref="0" armature="0.02" margin="0" name="joint6__21__" type="hinge" limited="false" ref="0" pos="-0.007546 0.000014 -0.000000" axis="1.000000 0.000000 -0.000000"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__0" type="mesh" mesh="link6_respondable__37__0"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__1" type="mesh" mesh="link6_respondable__37__1"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__2" type="mesh" mesh="link6_respondable__37__2"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__3" type="mesh" mesh="link6_respondable__37__3"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__4" type="mesh" mesh="link6_respondable__37__4"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__5" type="mesh" mesh="link6_respondable__37__5"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__6" type="mesh" mesh="link6_respondable__37__6"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__7" type="mesh" mesh="link6_respondable__37__7"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__8" type="mesh" mesh="link6_respondable__37__8"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__9" type="mesh" mesh="link6_respondable__37__9"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__10" type="mesh" mesh="link6_respondable__37__10"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__11" type="mesh" mesh="link6_respondable__37__11"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__12" type="mesh" mesh="link6_respondable__37__12"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__13" type="mesh" mesh="link6_respondable__37__13"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__14" type="mesh" mesh="link6_respondable__37__14"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__15" type="mesh" mesh="link6_respondable__37__15"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__16" type="mesh" mesh="link6_respondable__37__16"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__17" type="mesh" mesh="link6_respondable__37__17"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__18" type="mesh" mesh="link6_respondable__37__18"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__19" type="mesh" mesh="link6_respondable__37__19"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__20" type="mesh" mesh="link6_respondable__37__20"/>
+                                    <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="link6_respondable__37__21" type="mesh" mesh="link6_respondable__37__21"/>
+                                    <inertial mass="0.013678" pos="-0.000562 0.000175 0.000053" quat="0.698041 0.112722 0.698748 0.108557" diaginertia="0.000002 0.000002 0.000003"/>
+                                    <body name="fixed_sys_respondable__39__" pos="0.076454 -0.011407 0.026953" quat="-0.685923 -0.109182 -0.116317 0.709972">
+                                        <site name="fixed_joint__22__" pos="0.000106 -0.069860 -0.029495" quat="-0.488425 -0.508330 0.493828 -0.509093"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__0" type="mesh" mesh="fixed_sys_respondable__39__0"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__1" type="mesh" mesh="fixed_sys_respondable__39__1"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__2" type="mesh" mesh="fixed_sys_respondable__39__2"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__3" type="mesh" mesh="fixed_sys_respondable__39__3"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__4" type="mesh" mesh="fixed_sys_respondable__39__4"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__5" type="mesh" mesh="fixed_sys_respondable__39__5"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__6" type="mesh" mesh="fixed_sys_respondable__39__6"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__7" type="mesh" mesh="fixed_sys_respondable__39__7"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__8" type="mesh" mesh="fixed_sys_respondable__39__8"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__9" type="mesh" mesh="fixed_sys_respondable__39__9"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__10" type="mesh" mesh="fixed_sys_respondable__39__10"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__11" type="mesh" mesh="fixed_sys_respondable__39__11"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__12" type="mesh" mesh="fixed_sys_respondable__39__12"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__13" type="mesh" mesh="fixed_sys_respondable__39__13"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__14" type="mesh" mesh="fixed_sys_respondable__39__14"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__15" type="mesh" mesh="fixed_sys_respondable__39__15"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__16" type="mesh" mesh="fixed_sys_respondable__39__16"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__17" type="mesh" mesh="fixed_sys_respondable__39__17"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__18" type="mesh" mesh="fixed_sys_respondable__39__18"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__19" type="mesh" mesh="fixed_sys_respondable__39__19"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__20" type="mesh" mesh="fixed_sys_respondable__39__20"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__21" type="mesh" mesh="fixed_sys_respondable__39__21"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__22" type="mesh" mesh="fixed_sys_respondable__39__22"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__23" type="mesh" mesh="fixed_sys_respondable__39__23"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__24" type="mesh" mesh="fixed_sys_respondable__39__24"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__25" type="mesh" mesh="fixed_sys_respondable__39__25"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__26" type="mesh" mesh="fixed_sys_respondable__39__26"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__27" type="mesh" mesh="fixed_sys_respondable__39__27"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__28" type="mesh" mesh="fixed_sys_respondable__39__28"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__29" type="mesh" mesh="fixed_sys_respondable__39__29"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__30" type="mesh" mesh="fixed_sys_respondable__39__30"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__31" type="mesh" mesh="fixed_sys_respondable__39__31"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__32" type="mesh" mesh="fixed_sys_respondable__39__32"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__33" type="mesh" mesh="fixed_sys_respondable__39__33"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__34" type="mesh" mesh="fixed_sys_respondable__39__34"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__35" type="mesh" mesh="fixed_sys_respondable__39__35"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__36" type="mesh" mesh="fixed_sys_respondable__39__36"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__37" type="mesh" mesh="fixed_sys_respondable__39__37"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__38" type="mesh" mesh="fixed_sys_respondable__39__38"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__39" type="mesh" mesh="fixed_sys_respondable__39__39"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__40" type="mesh" mesh="fixed_sys_respondable__39__40"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__41" type="mesh" mesh="fixed_sys_respondable__39__41"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__42" type="mesh" mesh="fixed_sys_respondable__39__42"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__43" type="mesh" mesh="fixed_sys_respondable__39__43"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__44" type="mesh" mesh="fixed_sys_respondable__39__44"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__45" type="mesh" mesh="fixed_sys_respondable__39__45"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__46" type="mesh" mesh="fixed_sys_respondable__39__46"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__47" type="mesh" mesh="fixed_sys_respondable__39__47"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__48" type="mesh" mesh="fixed_sys_respondable__39__48"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__49" type="mesh" mesh="fixed_sys_respondable__39__49"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__50" type="mesh" mesh="fixed_sys_respondable__39__50"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__51" type="mesh" mesh="fixed_sys_respondable__39__51"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__52" type="mesh" mesh="fixed_sys_respondable__39__52"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__53" type="mesh" mesh="fixed_sys_respondable__39__53"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__54" type="mesh" mesh="fixed_sys_respondable__39__54"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__55" type="mesh" mesh="fixed_sys_respondable__39__55"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__56" type="mesh" mesh="fixed_sys_respondable__39__56"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__57" type="mesh" mesh="fixed_sys_respondable__39__57"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__58" type="mesh" mesh="fixed_sys_respondable__39__58"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__59" type="mesh" mesh="fixed_sys_respondable__39__59"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__60" type="mesh" mesh="fixed_sys_respondable__39__60"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__61" type="mesh" mesh="fixed_sys_respondable__39__61"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__62" type="mesh" mesh="fixed_sys_respondable__39__62"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__63" type="mesh" mesh="fixed_sys_respondable__39__63"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__64" type="mesh" mesh="fixed_sys_respondable__39__64"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__65" type="mesh" mesh="fixed_sys_respondable__39__65"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__66" type="mesh" mesh="fixed_sys_respondable__39__66"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__67" type="mesh" mesh="fixed_sys_respondable__39__67"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__68" type="mesh" mesh="fixed_sys_respondable__39__68"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__69" type="mesh" mesh="fixed_sys_respondable__39__69"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__70" type="mesh" mesh="fixed_sys_respondable__39__70"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__71" type="mesh" mesh="fixed_sys_respondable__39__71"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__72" type="mesh" mesh="fixed_sys_respondable__39__72"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__73" type="mesh" mesh="fixed_sys_respondable__39__73"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__74" type="mesh" mesh="fixed_sys_respondable__39__74"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__75" type="mesh" mesh="fixed_sys_respondable__39__75"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__76" type="mesh" mesh="fixed_sys_respondable__39__76"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__77" type="mesh" mesh="fixed_sys_respondable__39__77"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__78" type="mesh" mesh="fixed_sys_respondable__39__78"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__79" type="mesh" mesh="fixed_sys_respondable__39__79"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__80" type="mesh" mesh="fixed_sys_respondable__39__80"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__81" type="mesh" mesh="fixed_sys_respondable__39__81"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__82" type="mesh" mesh="fixed_sys_respondable__39__82"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__83" type="mesh" mesh="fixed_sys_respondable__39__83"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__84" type="mesh" mesh="fixed_sys_respondable__39__84"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__85" type="mesh" mesh="fixed_sys_respondable__39__85"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__86" type="mesh" mesh="fixed_sys_respondable__39__86"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__87" type="mesh" mesh="fixed_sys_respondable__39__87"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__88" type="mesh" mesh="fixed_sys_respondable__39__88"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__89" type="mesh" mesh="fixed_sys_respondable__39__89"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__90" type="mesh" mesh="fixed_sys_respondable__39__90"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__91" type="mesh" mesh="fixed_sys_respondable__39__91"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__92" type="mesh" mesh="fixed_sys_respondable__39__92"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__93" type="mesh" mesh="fixed_sys_respondable__39__93"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__94" type="mesh" mesh="fixed_sys_respondable__39__94"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__95" type="mesh" mesh="fixed_sys_respondable__39__95"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__96" type="mesh" mesh="fixed_sys_respondable__39__96"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__97" type="mesh" mesh="fixed_sys_respondable__39__97"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__98" type="mesh" mesh="fixed_sys_respondable__39__98"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__99" type="mesh" mesh="fixed_sys_respondable__39__99"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__100" type="mesh" mesh="fixed_sys_respondable__39__100"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__101" type="mesh" mesh="fixed_sys_respondable__39__101"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__102" type="mesh" mesh="fixed_sys_respondable__39__102"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__103" type="mesh" mesh="fixed_sys_respondable__39__103"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__104" type="mesh" mesh="fixed_sys_respondable__39__104"/>
+                                        <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="fixed_sys_respondable__39__105" type="mesh" mesh="fixed_sys_respondable__39__105"/>
+                                        <inertial mass="0.51901" pos="-0.001223 -0.009881 -0.010708" quat="0.625321 0.777131 0.047694 0.052594" diaginertia="0.000366 0.000415 0.000304"/>
+                                        <body name="screw_drive_respondable__41__" pos="-0.005128 0.089847 -0.029228" quat="-0.635455 0.648220 -0.290272 -0.302902">
+                                            <joint solreflimit="0.020000 1.000000" solimplimit="0.900000 0.950000 0.001000 0.500000 2.000000" solreffriction="0.020000 1.000000" solimpfriction="0.900000 0.950000 0.001000 0.500000 2.000000" stiffness="0" damping="0" springref="0" armature="0.02" margin="0" name="drive_joint__23__" type="hinge" limited="false" ref="0" pos="0.000031 -0.000000 -0.035727" axis="0.017610 0.000016 -0.999845"/>
+                                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="screw_drive_respondable__41__0" type="mesh" mesh="screw_drive_respondable__41__0"/>
+                                            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="screw_drive_respondable__41__1" type="mesh" mesh="screw_drive_respondable__41__1"/>
+                                            <inertial mass="0.00090795" pos="-0.000509 -0.000001 -0.005028" quat="0.006234 -0.706851 0.707308 -0.006218" diaginertia="0.000000 0.000000 0.000000"/>
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <body name="ResizableFloor_5_25_element__9__staticCounterpart" pos="0.000000 0.000000 -0.020000" quat="1.000000 0.000000 0.000000 0.000000" mocap="true"/>
+        <body name="ResizableFloor_5_25_element__9__" pos="0.000000 0.000000 -0.020000" quat="1.000000 0.000000 0.000000 0.000000">
+            <freejoint name="ResizableFloor_5_25_element__9__freejoint"/>
+            <geom friction="1.000000 0.005000 0.000100" solref="0.020000 1.000000" solimp="0.900000 0.950000 0.001000 0.050000 2.000000" solmix="1" condim="3" margin="0" priority="0" name="ResizableFloor_5_25_element__9__0" type="box" size="2.500000 2.500000 0.020000" pos="0.000000 0.000000 0.000000" quat="1.000000 0.000000 0.000000 0.000000"/>
+            <inertial mass="1000" pos="0.000000 0.000000 0.000000" quat="1.000000 0.000000 0.000000 0.000000" diaginertia="1.000000 1.000000 1.000000"/>
+        </body>
+    </worldbody>
+    <asset>
+        <texture type="skybox" builtin="gradient" rgb1="1 1 1" rgb2="0.600000 0.800000 1.000000" width="256" height="256"/>
+        <mesh file="base_link_respondable__25__0.stl"/>
+        <mesh file="base_link_respondable__25__1.stl"/>
+        <mesh file="base_link_respondable__25__2.stl"/>
+        <mesh file="base_link_respondable__25__3.stl"/>
+        <mesh file="base_link_respondable__25__4.stl"/>
+        <mesh file="base_link_respondable__25__5.stl"/>
+        <mesh file="base_link_respondable__25__6.stl"/>
+        <mesh file="base_link_respondable__25__7.stl"/>
+        <mesh file="base_link_respondable__25__8.stl"/>
+        <mesh file="base_link_respondable__25__9.stl"/>
+        <mesh file="base_link_respondable__25__10.stl"/>
+        <mesh file="base_link_respondable__25__11.stl"/>
+        <mesh file="base_link_respondable__25__12.stl"/>
+        <mesh file="base_link_respondable__25__13.stl"/>
+        <mesh file="base_link_respondable__25__14.stl"/>
+        <mesh file="base_link_respondable__25__15.stl"/>
+        <mesh file="base_link_respondable__25__16.stl"/>
+        <mesh file="base_link_respondable__25__17.stl"/>
+        <mesh file="base_link_respondable__25__18.stl"/>
+        <mesh file="base_link_respondable__25__19.stl"/>
+        <mesh file="base_link_respondable__25__20.stl"/>
+        <mesh file="base_link_respondable__25__21.stl"/>
+        <mesh file="base_link_respondable__25__22.stl"/>
+        <mesh file="base_link_respondable__25__23.stl"/>
+        <mesh file="base_link_respondable__25__24.stl"/>
+        <mesh file="base_link_respondable__25__25.stl"/>
+        <mesh file="base_link_respondable__25__26.stl"/>
+        <mesh file="base_link_respondable__25__27.stl"/>
+        <mesh file="base_link_respondable__25__28.stl"/>
+        <mesh file="base_link_respondable__25__29.stl"/>
+        <mesh file="base_link_respondable__25__30.stl"/>
+        <mesh file="base_link_respondable__25__31.stl"/>
+        <mesh file="base_link_respondable__25__32.stl"/>
+        <mesh file="base_link_respondable__25__33.stl"/>
+        <mesh file="base_link_respondable__25__34.stl"/>
+        <mesh file="base_link_respondable__25__35.stl"/>
+        <mesh file="base_link_respondable__25__36.stl"/>
+        <mesh file="link1_respondable__27__0.stl"/>
+        <mesh file="link1_respondable__27__1.stl"/>
+        <mesh file="link1_respondable__27__2.stl"/>
+        <mesh file="link1_respondable__27__3.stl"/>
+        <mesh file="link1_respondable__27__4.stl"/>
+        <mesh file="link1_respondable__27__5.stl"/>
+        <mesh file="link1_respondable__27__6.stl"/>
+        <mesh file="link1_respondable__27__7.stl"/>
+        <mesh file="link1_respondable__27__8.stl"/>
+        <mesh file="link2_respondable__29__0.stl"/>
+        <mesh file="link2_respondable__29__1.stl"/>
+        <mesh file="link2_respondable__29__2.stl"/>
+        <mesh file="link2_respondable__29__3.stl"/>
+        <mesh file="link2_respondable__29__4.stl"/>
+        <mesh file="link2_respondable__29__5.stl"/>
+        <mesh file="link2_respondable__29__6.stl"/>
+        <mesh file="link2_respondable__29__7.stl"/>
+        <mesh file="link2_respondable__29__8.stl"/>
+        <mesh file="link2_respondable__29__9.stl"/>
+        <mesh file="link3_respondable__31__0.stl"/>
+        <mesh file="link3_respondable__31__1.stl"/>
+        <mesh file="link3_respondable__31__2.stl"/>
+        <mesh file="link3_respondable__31__3.stl"/>
+        <mesh file="link3_respondable__31__4.stl"/>
+        <mesh file="link3_respondable__31__5.stl"/>
+        <mesh file="link3_respondable__31__6.stl"/>
+        <mesh file="link3_respondable__31__7.stl"/>
+        <mesh file="link3_respondable__31__8.stl"/>
+        <mesh file="link3_respondable__31__9.stl"/>
+        <mesh file="link3_respondable__31__10.stl"/>
+        <mesh file="link4_respondable__33__0.stl"/>
+        <mesh file="link4_respondable__33__1.stl"/>
+        <mesh file="link4_respondable__33__2.stl"/>
+        <mesh file="link4_respondable__33__3.stl"/>
+        <mesh file="link4_respondable__33__4.stl"/>
+        <mesh file="link4_respondable__33__5.stl"/>
+        <mesh file="link4_respondable__33__6.stl"/>
+        <mesh file="link4_respondable__33__7.stl"/>
+        <mesh file="link4_respondable__33__8.stl"/>
+        <mesh file="link4_respondable__33__9.stl"/>
+        <mesh file="link4_respondable__33__10.stl"/>
+        <mesh file="link4_respondable__33__11.stl"/>
+        <mesh file="link4_respondable__33__12.stl"/>
+        <mesh file="link4_respondable__33__13.stl"/>
+        <mesh file="link4_respondable__33__14.stl"/>
+        <mesh file="link4_respondable__33__15.stl"/>
+        <mesh file="link4_respondable__33__16.stl"/>
+        <mesh file="link4_respondable__33__17.stl"/>
+        <mesh file="link4_respondable__33__18.stl"/>
+        <mesh file="link4_respondable__33__19.stl"/>
+        <mesh file="link4_respondable__33__20.stl"/>
+        <mesh file="link5_respondable__35__0.stl"/>
+        <mesh file="link5_respondable__35__1.stl"/>
+        <mesh file="link5_respondable__35__2.stl"/>
+        <mesh file="link5_respondable__35__3.stl"/>
+        <mesh file="link5_respondable__35__4.stl"/>
+        <mesh file="link5_respondable__35__5.stl"/>
+        <mesh file="link5_respondable__35__6.stl"/>
+        <mesh file="link5_respondable__35__7.stl"/>
+        <mesh file="link5_respondable__35__8.stl"/>
+        <mesh file="link5_respondable__35__9.stl"/>
+        <mesh file="link5_respondable__35__10.stl"/>
+        <mesh file="link5_respondable__35__11.stl"/>
+        <mesh file="link5_respondable__35__12.stl"/>
+        <mesh file="link5_respondable__35__13.stl"/>
+        <mesh file="link5_respondable__35__14.stl"/>
+        <mesh file="link5_respondable__35__15.stl"/>
+        <mesh file="link5_respondable__35__16.stl"/>
+        <mesh file="link5_respondable__35__17.stl"/>
+        <mesh file="link5_respondable__35__18.stl"/>
+        <mesh file="link5_respondable__35__19.stl"/>
+        <mesh file="link5_respondable__35__20.stl"/>
+        <mesh file="link5_respondable__35__21.stl"/>
+        <mesh file="link5_respondable__35__22.stl"/>
+        <mesh file="link6_respondable__37__0.stl"/>
+        <mesh file="link6_respondable__37__1.stl"/>
+        <mesh file="link6_respondable__37__2.stl"/>
+        <mesh file="link6_respondable__37__3.stl"/>
+        <mesh file="link6_respondable__37__4.stl"/>
+        <mesh file="link6_respondable__37__5.stl"/>
+        <mesh file="link6_respondable__37__6.stl"/>
+        <mesh file="link6_respondable__37__7.stl"/>
+        <mesh file="link6_respondable__37__8.stl"/>
+        <mesh file="link6_respondable__37__9.stl"/>
+        <mesh file="link6_respondable__37__10.stl"/>
+        <mesh file="link6_respondable__37__11.stl"/>
+        <mesh file="link6_respondable__37__12.stl"/>
+        <mesh file="link6_respondable__37__13.stl"/>
+        <mesh file="link6_respondable__37__14.stl"/>
+        <mesh file="link6_respondable__37__15.stl"/>
+        <mesh file="link6_respondable__37__16.stl"/>
+        <mesh file="link6_respondable__37__17.stl"/>
+        <mesh file="link6_respondable__37__18.stl"/>
+        <mesh file="link6_respondable__37__19.stl"/>
+        <mesh file="link6_respondable__37__20.stl"/>
+        <mesh file="link6_respondable__37__21.stl"/>
+        <mesh file="fixed_sys_respondable__39__0.stl"/>
+        <mesh file="fixed_sys_respondable__39__1.stl"/>
+        <mesh file="fixed_sys_respondable__39__2.stl"/>
+        <mesh file="fixed_sys_respondable__39__3.stl"/>
+        <mesh file="fixed_sys_respondable__39__4.stl"/>
+        <mesh file="fixed_sys_respondable__39__5.stl"/>
+        <mesh file="fixed_sys_respondable__39__6.stl"/>
+        <mesh file="fixed_sys_respondable__39__7.stl"/>
+        <mesh file="fixed_sys_respondable__39__8.stl"/>
+        <mesh file="fixed_sys_respondable__39__9.stl"/>
+        <mesh file="fixed_sys_respondable__39__10.stl"/>
+        <mesh file="fixed_sys_respondable__39__11.stl"/>
+        <mesh file="fixed_sys_respondable__39__12.stl"/>
+        <mesh file="fixed_sys_respondable__39__13.stl"/>
+        <mesh file="fixed_sys_respondable__39__14.stl"/>
+        <mesh file="fixed_sys_respondable__39__15.stl"/>
+        <mesh file="fixed_sys_respondable__39__16.stl"/>
+        <mesh file="fixed_sys_respondable__39__17.stl"/>
+        <mesh file="fixed_sys_respondable__39__18.stl"/>
+        <mesh file="fixed_sys_respondable__39__19.stl"/>
+        <mesh file="fixed_sys_respondable__39__20.stl"/>
+        <mesh file="fixed_sys_respondable__39__21.stl"/>
+        <mesh file="fixed_sys_respondable__39__22.stl"/>
+        <mesh file="fixed_sys_respondable__39__23.stl"/>
+        <mesh file="fixed_sys_respondable__39__24.stl"/>
+        <mesh file="fixed_sys_respondable__39__25.stl"/>
+        <mesh file="fixed_sys_respondable__39__26.stl"/>
+        <mesh file="fixed_sys_respondable__39__27.stl"/>
+        <mesh file="fixed_sys_respondable__39__28.stl"/>
+        <mesh file="fixed_sys_respondable__39__29.stl"/>
+        <mesh file="fixed_sys_respondable__39__30.stl"/>
+        <mesh file="fixed_sys_respondable__39__31.stl"/>
+        <mesh file="fixed_sys_respondable__39__32.stl"/>
+        <mesh file="fixed_sys_respondable__39__33.stl"/>
+        <mesh file="fixed_sys_respondable__39__34.stl"/>
+        <mesh file="fixed_sys_respondable__39__35.stl"/>
+        <mesh file="fixed_sys_respondable__39__36.stl"/>
+        <mesh file="fixed_sys_respondable__39__37.stl"/>
+        <mesh file="fixed_sys_respondable__39__38.stl"/>
+        <mesh file="fixed_sys_respondable__39__39.stl"/>
+        <mesh file="fixed_sys_respondable__39__40.stl"/>
+        <mesh file="fixed_sys_respondable__39__41.stl"/>
+        <mesh file="fixed_sys_respondable__39__42.stl"/>
+        <mesh file="fixed_sys_respondable__39__43.stl"/>
+        <mesh file="fixed_sys_respondable__39__44.stl"/>
+        <mesh file="fixed_sys_respondable__39__45.stl"/>
+        <mesh file="fixed_sys_respondable__39__46.stl"/>
+        <mesh file="fixed_sys_respondable__39__47.stl"/>
+        <mesh file="fixed_sys_respondable__39__48.stl"/>
+        <mesh file="fixed_sys_respondable__39__49.stl"/>
+        <mesh file="fixed_sys_respondable__39__50.stl"/>
+        <mesh file="fixed_sys_respondable__39__51.stl"/>
+        <mesh file="fixed_sys_respondable__39__52.stl"/>
+        <mesh file="fixed_sys_respondable__39__53.stl"/>
+        <mesh file="fixed_sys_respondable__39__54.stl"/>
+        <mesh file="fixed_sys_respondable__39__55.stl"/>
+        <mesh file="fixed_sys_respondable__39__56.stl"/>
+        <mesh file="fixed_sys_respondable__39__57.stl"/>
+        <mesh file="fixed_sys_respondable__39__58.stl"/>
+        <mesh file="fixed_sys_respondable__39__59.stl"/>
+        <mesh file="fixed_sys_respondable__39__60.stl"/>
+        <mesh file="fixed_sys_respondable__39__61.stl"/>
+        <mesh file="fixed_sys_respondable__39__62.stl"/>
+        <mesh file="fixed_sys_respondable__39__63.stl"/>
+        <mesh file="fixed_sys_respondable__39__64.stl"/>
+        <mesh file="fixed_sys_respondable__39__65.stl"/>
+        <mesh file="fixed_sys_respondable__39__66.stl"/>
+        <mesh file="fixed_sys_respondable__39__67.stl"/>
+        <mesh file="fixed_sys_respondable__39__68.stl"/>
+        <mesh file="fixed_sys_respondable__39__69.stl"/>
+        <mesh file="fixed_sys_respondable__39__70.stl"/>
+        <mesh file="fixed_sys_respondable__39__71.stl"/>
+        <mesh file="fixed_sys_respondable__39__72.stl"/>
+        <mesh file="fixed_sys_respondable__39__73.stl"/>
+        <mesh file="fixed_sys_respondable__39__74.stl"/>
+        <mesh file="fixed_sys_respondable__39__75.stl"/>
+        <mesh file="fixed_sys_respondable__39__76.stl"/>
+        <mesh file="fixed_sys_respondable__39__77.stl"/>
+        <mesh file="fixed_sys_respondable__39__78.stl"/>
+        <mesh file="fixed_sys_respondable__39__79.stl"/>
+        <mesh file="fixed_sys_respondable__39__80.stl"/>
+        <mesh file="fixed_sys_respondable__39__81.stl"/>
+        <mesh file="fixed_sys_respondable__39__82.stl"/>
+        <mesh file="fixed_sys_respondable__39__83.stl"/>
+        <mesh file="fixed_sys_respondable__39__84.stl"/>
+        <mesh file="fixed_sys_respondable__39__85.stl"/>
+        <mesh file="fixed_sys_respondable__39__86.stl"/>
+        <mesh file="fixed_sys_respondable__39__87.stl"/>
+        <mesh file="fixed_sys_respondable__39__88.stl"/>
+        <mesh file="fixed_sys_respondable__39__89.stl"/>
+        <mesh file="fixed_sys_respondable__39__90.stl"/>
+        <mesh file="fixed_sys_respondable__39__91.stl"/>
+        <mesh file="fixed_sys_respondable__39__92.stl"/>
+        <mesh file="fixed_sys_respondable__39__93.stl"/>
+        <mesh file="fixed_sys_respondable__39__94.stl"/>
+        <mesh file="fixed_sys_respondable__39__95.stl"/>
+        <mesh file="fixed_sys_respondable__39__96.stl"/>
+        <mesh file="fixed_sys_respondable__39__97.stl"/>
+        <mesh file="fixed_sys_respondable__39__98.stl"/>
+        <mesh file="fixed_sys_respondable__39__99.stl"/>
+        <mesh file="fixed_sys_respondable__39__100.stl"/>
+        <mesh file="fixed_sys_respondable__39__101.stl"/>
+        <mesh file="fixed_sys_respondable__39__102.stl"/>
+        <mesh file="fixed_sys_respondable__39__103.stl"/>
+        <mesh file="fixed_sys_respondable__39__104.stl"/>
+        <mesh file="fixed_sys_respondable__39__105.stl"/>
+        <mesh file="screw_drive_respondable__41__0.stl"/>
+        <mesh file="screw_drive_respondable__41__1.stl"/>
+    </asset>
+    <tendon/>
+    <equality>
+        <weld body1="base_link_respondable__25__staticCounterpart" body2="base_link_respondable__25__" relpose="0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000"/>
+        <weld body1="ResizableFloor_5_25_element__9__staticCounterpart" body2="ResizableFloor_5_25_element__9__" relpose="0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000"/>
+    </equality>
+    <sensor>
+        <force name="fixed_joint__22__force" site="fixed_joint__22__"/>
+        <torque name="fixed_joint__22__torque" site="fixed_joint__22__"/>
+    </sensor>
+    <actuator>
+        <motor name="joint1__16__act" joint="joint1__16__"/>
+        <motor name="joint2__17__act" joint="joint2__17__"/>
+        <motor name="joint3__18__act" joint="joint3__18__"/>
+        <motor name="joint4__19__act" joint="joint4__19__"/>
+        <motor name="joint5__20__act" joint="joint5__20__"/>
+        <motor name="joint6__21__act" joint="joint6__21__"/>
+        <motor name="drive_joint__23__act" joint="drive_joint__23__"/>
+    </actuator>
+</mujoco>

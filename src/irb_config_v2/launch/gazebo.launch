@@ -13,7 +13,7 @@
   </include>
 
   <!-- send robot urdf to param server -->
-  <param name="robot_description" textfile="$(find irb_config_v2)/config/gazebo_abb_irb_sim_v2.urdf" />
+  <param name="robot_description" textfile="$(find abb_irb_sim_v2)/urdf/abb_irb_sim_v2.urdf" />
 
   <!-- unpause only after loading robot model -->
   <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />

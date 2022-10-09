@@ -14,7 +14,7 @@ def connect_port(port):
     print ("disconnected")
   return clientID
 
-ID=connect_port(19997)
+ID=connect_port(19999)
 
 def joint_callback(data:JointState):
     global ID,joint
