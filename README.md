@@ -9,7 +9,8 @@
 discuss how to operate
 
 # Simulation video
-https://user-images.githubusercontent.com/81301684/194423960-6112b00c-bc28-4c08-b5a8-a7338b8f9253.mp4
+[coppelia_Moveit_sync.webm](https://user-images.githubusercontent.com/81301684/196551505-59a329c2-e061-4812-9c18-5a2c26056d37.webm)
+
 
 
 
