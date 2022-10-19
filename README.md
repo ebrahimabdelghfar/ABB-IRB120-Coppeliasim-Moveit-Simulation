@@ -12,8 +12,12 @@
 
 ## Steps to run the simulation
 When running the simulation theres a sequance you must follow</br>
-1. Run ```roscore```
-2. open coppeliasim 
+1. install the dependencies 
+```
+rosdep install --from-paths src --ignore-src -r -y
+```
+2. Run ```roscore```
+3. open coppeliasim 
 ```
 cd ABB-IRB120-Coppeliasim-Moveit-Simulation
 cd src/CoppeliaSim/
