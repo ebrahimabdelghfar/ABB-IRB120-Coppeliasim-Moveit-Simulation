@@ -6,10 +6,46 @@
 </p>
 
 # Instructions
-discuss how to operate
+## Porpose of simulation
+* The porpose of simulation is to test our algorithms for our project **E-waste Non destructive disassembly** 
+* there are screw driver at the endeffector and a screw in threaded box that use to test algorithim for lossen the screw
+
+## Steps to run the simulation
+When running the simulation theres a sequance you must follow</br>
+1. Run ```roscore```
+2. open coppeliasim 
+```
+cd ABB-IRB120-Coppeliasim-Moveit-Simulation
+cd src/CoppeliaSim/
+./coppeliaSim
+```
+* then open the scene you want at path ABB-IRB120-Coppeliasim-Moveit-Simulation/src/abb_irb_sim_v2/scene</br>
+  there 2 scene : 
+  * scene without camera (for controlling purpose)
+  * scene with depth and RGB camera
+3. launch the sync and connector between moveit and coppeliasim after playing the simulator or press the play icon ▶️
+```
+cd ABB-IRB120-Coppeliasim-Moveit-Simulation
+source devel/setup.bash
+roslaunch sim_environment LaunchConnector.launch
+```
+4. start moveit tools 
+```
+roslaunch irb_config_v2 demo.launch
+```
+# ⚠️ Warning
+**If you stopped the simulator in any case you must close moveit tool (step4) and close the sync and connector**
+after paly the simulator then re-open them again (repeat **step 3** then **step 4**)
+# Robot Photo
+## All robot 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/81301684/196560694-a1b7d548-5b70-44ff-8ce3-97238b73f9ff.png">
+</p>
+
+## Endeffector
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/81301684/196561177-c649574f-79f5-4a16-b13d-6e8bfab13142.png">
+</p>
 
 # Simulation video
-https://user-images.githubusercontent.com/81301684/194423960-6112b00c-bc28-4c08-b5a8-a7338b8f9253.mp4
-
-
-
+[coppelia_Moveit_sync.webm](https://user-images.githubusercontent.com/81301684/196551505-59a329c2-e061-4812-9c18-5a2c26056d37.webm)
