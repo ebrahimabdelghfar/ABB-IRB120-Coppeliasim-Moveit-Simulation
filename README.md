@@ -36,7 +36,7 @@ roslaunch sim_environment LaunchConnector.launch
 ```
 # ⚠️ Warning
 **If you stopped the simulator in any case you must close moveit tool (step4) and close the sync and connector**
-after paly the simulator then re-open them again (repeat **step 3**)
+**after paly the simulator then re-open them again (repeat **step 3**)**
 # Robot Photo
 ## All robot 
 <p align="center">
