@@ -23,19 +23,16 @@ cd src/CoppeliaSim/
   there 2 scene : 
   * scene without camera (for controlling purpose)
   * scene with depth and RGB camera
+    * open --> open scene ---> which scene
 3. launch the sync and connector between moveit and coppeliasim after playing the simulator or press the play icon ▶️
 ```
 cd ABB-IRB120-Coppeliasim-Moveit-Simulation
 source devel/setup.bash
 roslaunch sim_environment LaunchConnector.launch
 ```
-4. start moveit tools 
-```
-roslaunch irb_config_v2 demo.launch
-```
 # ⚠️ Warning
 **If you stopped the simulator in any case you must close moveit tool (step4) and close the sync and connector**
-after paly the simulator then re-open them again (repeat **step 3** then **step 4**)
+after paly the simulator then re-open them again (repeat **step 3**)
 # Robot Photo
 ## All robot 
 <p align="center">
