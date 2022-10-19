@@ -2,4 +2,5 @@
   <param name='use_sim_time' value='true'/>
   <node name='SenseMotion' pkg='sim_environment' type='sense.py'/>
   <node name='MoveRobot' pkg='sim_environment' type='move_robot.py'/>
+  <include file="$(find irb_config_v2)/launch/demo.launch"/>
 </launch>
