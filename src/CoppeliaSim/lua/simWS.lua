@@ -1,3 +1,0 @@
-local simWS={}
-
-return simWS

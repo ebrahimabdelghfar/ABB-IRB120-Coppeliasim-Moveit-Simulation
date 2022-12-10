@@ -1,3 +1,0 @@
-local simMujoco={}
-
-return simMujoco
