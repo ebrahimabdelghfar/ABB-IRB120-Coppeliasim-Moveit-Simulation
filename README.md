@@ -8,7 +8,7 @@
 # Instructions
 ## Porpose of simulation
 * The porpose of simulation is to test our algorithms for our project **E-waste Non destructive disassembly** 
-* there are screw driver at the endeffector and a screw in threaded box that use to test algorithim for lossen the screw
+* There are screw driver at the endeffector that can rotate at different speed integrated with 6 axis force sensor
 
 ## Steps to run the simulation
 When running the simulation theres a sequance you must follow</br>
@@ -16,8 +16,8 @@ When running the simulation theres a sequance you must follow</br>
 ```
 rosdep install --from-paths src --ignore-src -r -y
 ```
-2. Run ```roscore```
-3. open coppeliasim 
+2. install Coppeliasim of version **EDU** from the following link https://www.coppeliarobotics.com/downloads
+3. Run ```roscore```
 ```
 cd ABB-IRB120-Coppeliasim-Moveit-Simulation
 cd src/CoppeliaSim/
