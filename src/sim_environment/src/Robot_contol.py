@@ -1,7 +1,7 @@
 import sys
 import copy
 import rospy
-import moveit_commander
+from moveit_commander import *
 import moveit_msgs.msg
 import geometry_msgs.msg
 import tf2_ros
@@ -21,18 +21,18 @@ class ABB_IRB120:
             group_name: name of the group of joints to be controlled by moveit
         '''
         # initialize moveit_commander and rospy node
-        moveit_commander.roscpp_initialize(sys.argv)
+        roscpp_initialize(sys.argv)
         
         # Instantiate a RobotCommander object.
         # Provides information such as the robot’s kinematic model and the robot’s current joint states
-        self.robot = moveit_commander.RobotCommander()
+        self.robot = RobotCommander()
 
         # Instantiate a PlanningSceneInterface object.
         # This provides a remote interface for getting, setting, and updating the robot’s internal understanding of the surrounding world:
-        self.scene = moveit_commander.PlanningSceneInterface()
+        self.scene = PlanningSceneInterface()
 
         # define the group of joints to be controlled by moveit
-        self.move_group = moveit_commander.MoveGroupCommander(group_name)
+        self.move_group = MoveGroupCommander(group_name)
 
         self.move_group.set_planning_time(0.05)
         self.move_group.allow_replanning(True)
@@ -77,16 +77,19 @@ class ABB_IRB120:
         # clear the targets
         self.move_group.clear_pose_targets()
         pass
-    def go_to_pose_goal_cartesian_waypoints(self, waypoints):
+    def go_to_pose_goal_cartesian_waypoints(self, waypoints,velocity=0.1,acceleration=0.1):
         '''
         --------------------
         This function is used to move the robot to the desired pose by cartesian path
         --------------------
         arguments:
-
             waypoints: nx6 list of waypoints
                 n: number of waypoints
                 6: x,y,z,roll,pitch,yaw
+            
+            velocity: velocity of the robot
+        
+            acceleration: acceleration of the robot
         '''
         list_of_poses = []
         geo_pose=geometry_msgs.msg.Pose() #create a geometry_msgs.msg.Pose() object
@@ -111,10 +114,15 @@ class ABB_IRB120:
         # set the goal pose
         (plan, fraction) = self.move_group.compute_cartesian_path(
                                     list_of_poses,   # waypoints to follow
-                                    0.08,        # eef_step
+                                    0.01,        # eef_step
                                     0.0)         # jump_threshold
         # plan the motion
-        self.move_group.execute(plan,wait=True)
+
+        # generate a new plan with the new velocity and acceleration by retiming the trajectory
+        new_plan=self.move_group.retime_trajectory(self.robot.get_current_state(),plan,velocity_scaling_factor=velocity,acceleration_scaling_factor=acceleration)
+        
+        # execute the plan
+        self.move_group.execute(new_plan,wait=True)
 
         pass
     def generate_spiral_waypoints(self,starting_pose,angle,step):
@@ -281,6 +289,7 @@ class frames_transformations:
         # put the frame in the tf tree
         self.static_broadcaster.sendTransform(frames_msg)
 
+# main_function for testing the class
 if __name__ == "__main__":
     ABB_robot = ABB_IRB120()
     frames=frames_transformations()
@@ -294,7 +303,7 @@ if __name__ == "__main__":
         frames.put_frame_static_frame(parent_frame_name="base_link",child_frame_name="frame_"+str(i),frame_coordinate=list_of_poses[i])
         rospy.sleep(0.001)
     # move the robot follow waypoints
-    ABB_robot.go_to_pose_goal_cartesian_waypoints(list_of_poses)
+    ABB_robot.go_to_pose_goal_cartesian_waypoints(list_of_poses,,0.001,0.001)
 
 
 
