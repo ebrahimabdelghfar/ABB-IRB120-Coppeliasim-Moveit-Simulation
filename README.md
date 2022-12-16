@@ -17,17 +17,18 @@ When running the simulation theres a sequance you must follow</br>
 rosdep install --from-paths src --ignore-src -r -y
 ```
 2. install Coppeliasim of version **EDU** from the following link https://www.coppeliarobotics.com/downloads
-3. Run ```roscore```
+3. Run ```roscore```  ⚠️**you do this before running the simulator**
 ```
-cd ABB-IRB120-Coppeliasim-Moveit-Simulation
+cd <coppeliasim_folder>
 cd src/CoppeliaSim/
-./coppeliaSim
+./coppeliaSim.sh
 ```
 * then open the scene you want at path ABB-IRB120-Coppeliasim-Moveit-Simulation/src/abb_irb_sim_v2/scene</br>
   there 2 scene : 
   * scene without camera (for controlling purpose)
   * scene with depth and RGB camera
-    * open --> open scene ---> which scene
+  note : you can find the scene at ABB-IRB120-Coppeliasim-Moveit-Simulation/scr/abb_irb_sim_v2/scene
+  
 3. launch the sync and connector between moveit and coppeliasim after playing the simulator or press the play icon ▶️
 ```
 cd ABB-IRB120-Coppeliasim-Moveit-Simulation
@@ -35,9 +36,10 @@ source devel/setup.bash
 roslaunch sim_environment LaunchConnector.launch
 ```
 # ⚠️ Warning
-**If you stopped the simulator in any case you must close moveit tool (step4) and close the sync and connector**
+**If you stopped the simulator in any case you must close moveit tool (step4) and close the sync and connector node**
 **after paly the simulator then re-open them again (repeat **step 3**)**
 # Robot Photo
+
 ## All robot 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/81301684/196560694-a1b7d548-5b70-44ff-8ce3-97238b73f9ff.png">
@@ -50,3 +52,8 @@ roslaunch sim_environment LaunchConnector.launch
 
 # Simulation video
 [coppelia_Moveit_sync.webm](https://user-images.githubusercontent.com/81301684/196551505-59a329c2-e061-4812-9c18-5a2c26056d37.webm)
+
+
+https://user-images.githubusercontent.com/81301684/208136648-706631aa-8259-4923-b7af-b69777a4566d.mp4
+
+
