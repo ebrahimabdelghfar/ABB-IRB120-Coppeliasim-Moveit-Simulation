@@ -51,9 +51,10 @@ roslaunch sim_environment LaunchConnector.launch
 </p>
 
 # Simulation video
+## How moveIt connected to Coppeliasim
 [coppelia_Moveit_sync.webm](https://user-images.githubusercontent.com/81301684/196551505-59a329c2-e061-4812-9c18-5a2c26056d37.webm)
 
-
+## Simulating Spiral search algorithim
 https://user-images.githubusercontent.com/81301684/208136648-706631aa-8259-4923-b7af-b69777a4566d.mp4
 
 
