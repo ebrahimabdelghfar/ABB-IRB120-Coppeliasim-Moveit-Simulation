@@ -2,24 +2,20 @@ import sys
 import copy
 import rospy
 from moveit_commander import *
-import moveit_msgs.msg
 import geometry_msgs.msg
 import tf2_ros
 import tf.transformations
 import math
 
-rospy.init_node("ABB_IRB120")
-
-class ABB_IRB120:
-    def __init__(self,group_name="joint_group"):
+class RobotContol:
+    def __init__(self,node_name="robot_control",group_name="joint_group"):
         '''
-        --------------------
-        This class is used to control the ABB IRB120 robot using moveit
-        --------------------
         constructor arguments:
             node_name: name of the node
             group_name: name of the group of joints to be controlled by moveit
         '''
+        # initialize the node
+        rospy.init_node(node_name)
         # initialize moveit_commander and rospy node
         roscpp_initialize(sys.argv)
         
@@ -148,6 +144,8 @@ class ABB_IRB120:
 
     def get_joint_state(self):
         '''
+        fuctionality:
+            This function is used to get the robot's joints state
         --------------------
         arguments:
             no arguments
@@ -163,6 +161,8 @@ class ABB_IRB120:
         return joint_state
     def get_pose(self):
         '''
+        fuctionality:
+            This function is used to get the robot's or the end effector
         --------------------
         arguments:
             no arguments
@@ -176,8 +176,10 @@ class ABB_IRB120:
         # get the current pose
         pose = self.move_group.get_current_pose().pose
         return pose
-    def get_joint_velocity(self):
+    def get_joints_velocity(self):
         '''
+        fucntionality:
+            This function is used to get the current joint velocity of the robot
         --------------------
         arguments:
             no arguments
@@ -193,11 +195,11 @@ class ABB_IRB120:
         return joint_velocity
     def get_end_effector_velocity(self):
         '''
+        functionality:
+            This function is used to get the current end effector velocity of the robot
         --------------------
         arguments:
             no arguments
-        --------------------
-        This function is used to get the current end effector velocity of the robot
         --------------------
         return:
             end_effector_velocity: geometry_msgs.msg.Twist
@@ -208,14 +210,13 @@ class ABB_IRB120:
         return end_effector_velocity
 
 class frames_transformations:
-    '''
-     functioninality:
-        This class is used in transforming and putting the frames using tf2_ros
-    '''
     def __init__(self):
         '''
         --------------------
-        This class is used to transform the frames
+        the constructor of the class
+        --------------------
+        functioninality:
+            This function is used to instantiate the tf2_ros objects
         --------------------
         '''
         # This object is used to store the frames
@@ -234,8 +235,8 @@ class frames_transformations:
 
     def transform(self, parent_id, child_frame_id):
         '''
-        --------------------
-        This function is used to transform the frames
+        functioninality:
+            This function is used get the transform between two frames and return the pose of the child frame
         --------------------
         arguments:
             parent_id: name of the parent frame
@@ -272,8 +273,10 @@ class frames_transformations:
             frame_coordinate: list of coordinates of the frame 1x6
                 [x,y,z,rx,ry,rz]
                 translation( in meter ) and rotation ( in radians )
-
-            
+        functionality:
+            This function is used to put the frame in the tf tree
+            it have delay of 0.05 seconds for the frame to be published
+        --------------------
         '''
         frames_msg=geometry_msgs.msg.TransformStamped()
         frames_msg.header.frame_id=parent_frame_name
@@ -288,22 +291,8 @@ class frames_transformations:
         frames_msg.transform.rotation.w=quatrion[3]
         # put the frame in the tf tree
         self.static_broadcaster.sendTransform(frames_msg)
+        rospy.sleep(0.05)
 
-# main_function for testing the class
-if __name__ == "__main__":
-    ABB_robot = ABB_IRB120()
-    frames=frames_transformations()
-    current_pose=geometry_msgs.msg.Pose()
-    current_pose=ABB_robot.get_pose()
-    list_of_poses=list()
-    # produce list of spiral cordinate (x,y) for the robot to follow strat from current pose
-    list_of_poses=ABB_robot.generate_spiral_waypoints(current_pose,360,0.001)
-    # put the spiral list as frames
-    for i in range(0,200):
-        frames.put_frame_static_frame(parent_frame_name="base_link",child_frame_name="frame_"+str(i),frame_coordinate=list_of_poses[i])
-        rospy.sleep(0.001)
-    # move the robot follow waypoints
-    ABB_robot.go_to_pose_goal_cartesian_waypoints(list_of_poses,,0.001,0.001)
 
 
 
