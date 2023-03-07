@@ -50,6 +50,22 @@ roslaunch sim_environment LaunchConnector.launch
   <img src="https://user-images.githubusercontent.com/81301684/196561177-c649574f-79f5-4a16-b13d-6e8bfab13142.png">
 </p>
 
+# Robot control module 
+I have construct a python module that facilite the controling of the robot in moveit that called **Robot_contol.py** <br>
+the module contain two classes : <br>
+```
+class RobotControl
+'''
+This class contain module that facilitate the controll of the robot using moveit 
+'''
+
+class frames_transformations
+'''
+this class is used to put and tarnsform frames in the tf tree
+'''
+```
+
+
 # Simulation video
 ## How moveIt connected to Coppeliasim
 [coppelia_Moveit_sync.webm](https://user-images.githubusercontent.com/81301684/196551505-59a329c2-e061-4812-9c18-5a2c26056d37.webm)
