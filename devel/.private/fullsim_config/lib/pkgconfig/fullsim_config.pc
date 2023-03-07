@@ -1,0 +1,8 @@
+prefix=/home/ebrahim/ABB-IRB120-Coppeliasim-Moveit-Simulation/devel/.private/fullsim_config
+
+Name: fullsim_config
+Description: Description of fullsim_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

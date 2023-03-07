@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: FullSimV7
+    relative_path: urdf/FullSimV7.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/FullSimV7.srdf
+  CONFIG:
+    author_name: ebrahim
+    author_email: ebrahimabdelghfar550@gmail.com
+    generated_timestamp: 1678096250

@@ -23,22 +23,22 @@ def connect_port(port):
   return clientID
 
 # this function is called to set the joint angle of the robot in the simulator received from moveit
-'''
 def joint_callback(data:JointState):
-  argument : 
-    data : JointState message recieved from moveit
-  function :
-    set the joint angle of the robot in the simulator
-  return:
-    None
+  '''
+  def joint_callback(data:JointState):
+    argument : 
+      data : JointState message recieved from moveit
+    function :
+      set the joint angle of the robot in the simulator
+    return:
+      None
 '''
-def joint_callback(data:JointState):
-    global ID,joint
-    for i in range(6):
-      # get the joint handle of the each joint and give the angle to the joint
-      _,joint_handle=sim.simxGetObjectHandle(ID,joint[i],sim.simx_opmode_oneshot_wait)
-      # now move the joint to the angle received from moveit
-      sim.simxSetJointTargetPosition(ID,joint_handle,data.position[i],sim.simx_opmode_oneshot)
+  global ID,joint
+  for i in range(6):
+    # get the joint handle of the each joint and give the angle to the joint
+    _,joint_handle=sim.simxGetObjectHandle(ID,joint[i],sim.simx_opmode_oneshot_wait)
+    # now move the joint to the angle received from moveit
+    sim.simxSetJointTargetPosition(ID,joint_handle,data.position[i],sim.simx_opmode_oneshot)
 
 #intiate the node 
 rospy.init_node("move_robot")
@@ -47,9 +47,4 @@ rospy.Subscriber("/move_group/fake_controller_joint_states",JointState,joint_cal
 #defining the port number and getting the ID number
 ID=connect_port(19999)
 #keep the node running
-rospy.spin()
-
-
-
-
-  
+rospy.spin()  

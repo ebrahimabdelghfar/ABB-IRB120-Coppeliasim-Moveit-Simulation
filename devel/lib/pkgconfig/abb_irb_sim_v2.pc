@@ -1,0 +1,1 @@
+/home/ebrahim/ABB-IRB120-Coppeliasim-Moveit-Simulation/devel/.private/abb_irb_sim_v2/lib/pkgconfig/abb_irb_sim_v2.pc

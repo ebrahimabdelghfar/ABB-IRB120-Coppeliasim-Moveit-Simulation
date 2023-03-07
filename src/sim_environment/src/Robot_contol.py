@@ -6,8 +6,12 @@ import geometry_msgs.msg
 import tf2_ros
 import tf.transformations
 import math
+from std_msgs.msg import Bool
 
-class RobotContol:
+class RobotControl:
+    '''
+    This class contain module that facilitate the controll of the robot using moveit 
+    '''
     def __init__(self,node_name="robot_control",group_name="joint_group"):
         '''
         constructor arguments:
@@ -23,6 +27,7 @@ class RobotContol:
         # Provides information such as the robot’s kinematic model and the robot’s current joint states
         self.robot = RobotCommander()
 
+        print(self.robot.get_group_names())
         # Instantiate a PlanningSceneInterface object.
         # This provides a remote interface for getting, setting, and updating the robot’s internal understanding of the surrounding world:
         self.scene = PlanningSceneInterface()
@@ -30,7 +35,7 @@ class RobotContol:
         # define the group of joints to be controlled by moveit
         self.move_group = MoveGroupCommander(group_name)
 
-        self.move_group.set_planning_time(0.05)
+        self.move_group.set_planning_time(0.1)
         self.move_group.allow_replanning(True)
         pass
     def go_by_joint_angle(self, joint_goal_list,velocity=0.1,acceleration=0.1):
@@ -70,29 +75,31 @@ class RobotContol:
         self.move_group.set_pose_target(pose_goal)
         # plan the motion
         plan = self.move_group.go(wait=True)
+        self.move_group.stop()
         # clear the targets
         self.move_group.clear_pose_targets()
         pass
-    def go_to_pose_goal_cartesian_waypoints(self, waypoints,velocity=0.1,acceleration=0.1):
+    def go_to_pose_goal_cartesian_waypoints(self, waypoints,velocity=0.1,acceleration=0.1,list_type=False):
         '''
         --------------------
         This function is used to move the robot to the desired pose by cartesian path
         --------------------
         arguments:
-            waypoints: nx6 list of waypoints
-                n: number of waypoints
-                6: x,y,z,roll,pitch,yaw
-            
+            if list_type is true 
+                waypoints: nx6 list of waypoints
+                    n: number of waypoints
+                    6: x,y,z,roll,pitch,yaw
+            if list_type is false 
+                waypoints is given by type geometry_msgs.msg.Pose
+
             velocity: velocity of the robot
         
             acceleration: acceleration of the robot
-        '''
-        list_of_poses = []
-        geo_pose=geometry_msgs.msg.Pose() #create a geometry_msgs.msg.Pose() object
 
-        #its better to use the current pose of the robot as the starting point or execute will fail 
-        current=self.move_group.get_current_pose().pose #get the current pose of the robot
-        list_of_poses.append(copy.deepcopy(current)) # append the current pose to the list of poses as start
+            list_type indicatie if the given waypoints is geometry_msgs.msg.Pose or list
+        '''
+        geo_pose=geometry_msgs.msg.Pose() #create a geometry_msgs.msg.Pose() object
+        list_of_poses = []
         for ways in waypoints:
             #set the position of the pose
             geo_pose.position.x = ways[0]
@@ -139,9 +146,8 @@ class RobotContol:
         list_poses = []
         # generate the waypoints
         for i in range(angle):
-            list_poses.append([starting_pose.position.x+step*i*math.cos(i/5),starting_pose.position.y+step*i*math.sin(i/5),current_pose.position.z,math.pi,0,0])
+            list_poses.append([starting_pose.position.x+step*i*math.cos(i/5),starting_pose.position.y+step*i*math.sin(i/5),starting_pose.position.z,math.pi/2,0,0])
         return list_poses
-
     def get_joint_state(self):
         '''
         fuctionality:
@@ -210,6 +216,9 @@ class RobotContol:
         return end_effector_velocity
 
 class frames_transformations:
+    '''
+    this class is used to put and tarnsform frames in the tf tree
+    '''
     def __init__(self):
         '''
         --------------------
@@ -243,7 +252,7 @@ class frames_transformations:
             child_frame_id: name of the child frame
         --------------------
         return:
-            pose: geometry_msgs.msg.PoseStamped()
+            pose: geometry_msgs.msg.Pose()
         '''
         # transform the frame
 
@@ -252,14 +261,14 @@ class frames_transformations:
 
         transform_msg = self.tfBuffer.lookup_transform(parent_id,child_frame_id,rospy.Time.now())
         #transfer from TransformStamped() to PoseStamped()
-        pose.position.x = transform_msg.transform.translation.x
-        pose.position.y = transform_msg.transform.translation.y
-        pose.position.z = transform_msg.transform.translation.z
-        pose.orientation.x = transform_msg.transform.rotation.x
-        pose.orientation.y = transform_msg.transform.rotation.y
-        pose.orientation.z = transform_msg.transform.rotation.z
-        pose.orientation.w = transform_msg.transform.rotation.w
-
+        pose.position.x=transform_msg.transform.translation.x
+        pose.position.y=transform_msg.transform.translation.y
+        pose.position.z=transform_msg.transform.translation.z
+        pose.orientation.x=transform_msg.transform.rotation.x
+        pose.orientation.y=transform_msg.transform.rotation.y
+        pose.orientation.z=transform_msg.transform.rotation.z
+        pose.orientation.w=transform_msg.transform.rotation.w
+        
         return pose
 
     def put_frame_static_frame(self,parent_frame_name="base_link",child_frame_name="tool0",frame_coordinate=[0,0,0,0,0,0]):
@@ -291,21 +300,97 @@ class frames_transformations:
         frames_msg.transform.rotation.w=quatrion[3]
         # put the frame in the tf tree
         self.static_broadcaster.sendTransform(frames_msg)
-        rospy.sleep(0.05)
+        rospy.sleep(0.1)
 
-
-
-
+class EwasteRobot:
+    def __init__(self,group_name_1="tooless"):
+        self.RobotController = RobotControl(group_name=group_name_1)
+        self.TransformationCalculator=frames_transformations()
+    def GetTool(self):
+        '''
+        --------------------
+        This function is used get tool 
+        --------------------
+        arguments:
+            null 
+        functionality:
+            This function is used to move the robot and get the tool
+        --------------------
+        '''
+        # put the frame in the tf tree
+        self.TransformationCalculator.put_frame_static_frame(parent_frame_name="table",child_frame_name="well",frame_coordinate=[0.000,-0.2,0.45,0.0,-3.14,0.0])
+        # get the pose of the base_link
+        pose=self.TransformationCalculator.transform(parent_id="base_link",child_frame_id="well")
+        # move the robot to the pose
+        self.RobotController.go_to_pose_goal_cartesian(pose,0.5,0.5)
     
+        self.TransformationCalculator.put_frame_static_frame(parent_frame_name="table",child_frame_name="well",frame_coordinate=[0.000,-0.152,0.45,0.0,-3.14,0.0])
+        # get the pose of the base_link
+        pose=self.TransformationCalculator.transform(parent_id="base_link",child_frame_id="well")
+        # move the robot to the pose
+        self.RobotController.go_to_pose_goal_cartesian(pose,0.3,0.3)
 
-    
+        #used only if we use the simulator to simulate tjhe gripping the effect
+        while grip_tool.get_num_connections()>1:
+            pass
+        grip_flag.data=True
+        grip_tool.publish(grip_flag)
+        #end 
 
+        self.TransformationCalculator.put_frame_static_frame(parent_frame_name="table",child_frame_name="well",frame_coordinate=[0.000,-0.152,0.5,0.0,-3.14,0.0])
+        # get the pose of the base_link
+        pose=self.TransformationCalculator.transform(parent_id="base_link",child_frame_id="well")
+        # move the robot to the pose
+        self.RobotController.go_to_pose_goal_cartesian(pose,0.3,0.3)
+    def ReturnTool(self):
+        '''
+        --------------------
+        This function is used get tool 
+        --------------------
+        arguments:
+            null 
+        functionality:
+            This function is used to move the robot and get the tool
+        --------------------
+        '''
+        self.TransformationCalculator.put_frame_static_frame(parent_frame_name="table",child_frame_name="well",frame_coordinate=[0.000,-0.152,0.5,0.0,-3.14,0.0])
+        pose=self.TransformationCalculator.transform(parent_id="base_link",child_frame_id="well")
+        self.RobotController.go_to_pose_goal_cartesian(pose,0.3,0.3)
 
+        self.TransformationCalculator.put_frame_static_frame(parent_frame_name="table",child_frame_name="well",frame_coordinate=[0.000,-0.152,0.45,0.0,-3.14,0.0])
+        # get the pose of the base_link
+        pose=self.TransformationCalculator.transform(parent_id="base_link",child_frame_id="well")
+        # move the robot to the pose
+        self.RobotController.go_to_pose_goal_cartesian(pose,0.3,0.3)
 
+        #used only if we use the simulator to simulate tjhe gripping the effect
+        while grip_tool.get_num_connections()>1:
+            pass
+        grip_flag.data=False
+        grip_tool.publish(grip_flag)
+        #end 
 
+        # put the frame in the tf tree
+        self.TransformationCalculator.put_frame_static_frame(parent_frame_name="table",child_frame_name="well",frame_coordinate=[0.000,-0.2,0.45,0.0,-3.14,0.0])
+        # get the pose of the base_link
+        pose=self.TransformationCalculator.transform(parent_id="base_link",child_frame_id="well")
+        # move the robot to the pose
+        self.RobotController.go_to_pose_goal_cartesian(pose,0.5,0.5)
+    def Homing(self):
+        self.RobotController.go_by_joint_angle([0.0,0.0,0.0,0.0,-1.57,0.0],0.5,0.5)
+    def SpiralSearch(self):
+        pose=self.RobotController.generate_spiral_waypoints(self.RobotController.get_pose(),100,0.0001)
+        self.RobotController.go_to_pose_goal_cartesian_waypoints(pose,0.4,0.5,list_type=True)
 
+grip_tool=rospy.Publisher("/grip",Bool,queue_size=1)
+grip_flag=Bool()
+pose_msg_list=[]
 
- 
-
-
-    
+if __name__=="__main__":
+   EwasteTooless=EwasteRobot(group_name_1="tooless")
+   EwasteTooled=EwasteRobot(group_name_1="tooled")
+   EwasteTooless.GetTool()
+   EwasteTooless.Homing()
+   EwasteTooled.SpiralSearch()
+   EwasteTooless.ReturnTool()
+   EwasteTooless.Homing()

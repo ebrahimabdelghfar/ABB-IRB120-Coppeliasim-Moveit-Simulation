@@ -1,0 +1,8 @@
+prefix=/home/ebrahim/ABB-IRB120-Coppeliasim-Moveit-Simulation/devel/.private/Full_simulation_V5
+
+Name: Full_simulation_V5
+Description: Description of Full_simulation_V5
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

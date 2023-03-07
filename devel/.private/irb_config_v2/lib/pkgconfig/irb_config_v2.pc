@@ -1,0 +1,8 @@
+prefix=/home/ebrahim/ABB-IRB120-Coppeliasim-Moveit-Simulation/devel/.private/irb_config_v2
+
+Name: irb_config_v2
+Description: Description of irb_config_v2
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

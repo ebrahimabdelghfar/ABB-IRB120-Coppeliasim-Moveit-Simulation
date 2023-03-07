@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="FullSimV7">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="8.01221018465203E-05 0.0420392814407755 0.0796375119984053"
+        rpy="0 0 0" />
+      <mass
+        value="6.21501792819702" />
+      <inertia
+        ixx="0.0270340655331265"
+        ixy="-2.57805354020046E-05"
+        ixz="5.64681783540072E-06"
+        iyy="0.0246211805699077"
+        iyz="0.000231715875730709"
+        izz="0.0251985329497968" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="table">
+    <inertial>
+      <origin
+        xyz="-0.000587334659227223 -0.036835217277921 0.00384621822964123"
+        rpy="0 0 0" />
+      <mass
+        value="38.2098634955696" />
+      <inertia
+        ixx="1.76951510127153"
+        ixy="7.87860313616648E-13"
+        ixz="-6.00695729462105E-09"
+        iyy="4.89848881605849"
+        iyz="-1.52454354921741E-06"
+        izz="3.14477810036567" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/table.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/table.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_to_table"
+    type="fixed">
+    <origin
+      xyz="0 -0.3 -0.06"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="table" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="9.76732621401681E-05 -0.0934118532229969 -0.000119298053319146"
+        rpy="0 0 0" />
+      <mass
+        value="3.06699528368256" />
+      <inertia
+        ixx="0.0122691119268035"
+        ixy="-6.06301855244587E-08"
+        ixz="-6.55505866407348E-08"
+        iyy="0.010420464941063"
+        iyz="1.02323146817326E-05"
+        izz="0.0124355568876054" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.145"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="30"
+      velocity="4.3633" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.000778290754818719 -0.111243319477227 -0.00211702728559995"
+        rpy="0 0 0" />
+      <mass
+        value="3.90867225505932" />
+      <inertia
+        ixx="0.0381250476767169"
+        ixy="2.39514964920965E-07"
+        ixz="6.58338782216223E-07"
+        iyy="0.00472640445966927"
+        iyz="2.44754291823662E-05"
+        izz="0.0405764423241449" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0 -0.135 0"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.9199"
+      upper="1.9199"
+      effort="30"
+      velocity="4.3633" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.022807862091609 -0.0679103941631886 0.00106436584971425"
+        rpy="0 0 0" />
+      <mass
+        value="2.94371284994558" />
+      <inertia
+        ixx="0.00563959160367682"
+        ixy="0.00319915568103023"
+        ixz="0.000121370698569511"
+        iyy="0.0109004054439392"
+        iyz="-0.000112947532054193"
+        izz="0.0122023306054157" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="0 -0.27 0"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.2217"
+      upper="1.9199"
+      effort="30"
+      velocity="4.3633" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.0761733794571278 -0.0104055180752324 0.000153408208564695"
+        rpy="0 0 0" />
+      <mass
+        value="1.32786358676143" />
+      <inertia
+        ixx="0.00104441110074889"
+        ixy="-5.6933503274904E-06"
+        ixz="-4.64060997837912E-05"
+        iyy="0.00335577028738533"
+        iyz="-8.37899053841392E-07"
+        izz="0.00388434077701931" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="continuous">
+    <origin
+      xyz="0.148530487442461 -0.0700000000000001 0"
+      rpy="0 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.7953"
+      upper="2.7953"
+      effort="30"
+      velocity="5.5851" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-0.00109483653040998 -0.00993778308121185 -3.68522372524093E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.546626828584249" />
+      <inertia
+        ixx="0.000404579534029812"
+        ixy="-4.2562823211924E-07"
+        ixz="1.84466415886299E-06"
+        iyy="0.000290010440170718"
+        iyz="-8.5801776169596E-09"
+        izz="0.000367479482204773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="continuous">
+    <origin
+      xyz="0.153469512557526 -0.0199999999999999 0"
+      rpy="-3.14159265358979 0 0" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="30"
+      velocity="5.5851" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="0.00121542455406494 0.0513577285751537 0.0155013484239185"
+        rpy="0 0 0" />
+      <mass
+        value="0.531526383714213" />
+      <inertia
+        ixx="0.00029979262466505"
+        ixy="4.10956668633225E-06"
+        ixz="1.78389382276731E-06"
+        iyy="0.000432419044233939"
+        iyz="-1.40279393876341E-05"
+        izz="0.000340964239376309" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="continuous">
+    <origin
+      xyz="0.0700000000000162 -0.00999999999999979 0"
+      rpy="1.5707963267949 -1.57079630572147 3.14159265358979" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.9813"
+      upper="6.9813"
+      effort="30"
+      velocity="7.3304" />
+  </joint>
+  <link
+    name="dummy_with_out_tool">
+    <inertial>
+      <origin
+        xyz="-6.08150040676256E-14 -0.00999999999989892 0"
+        rpy="0 0 0" />
+      <mass
+        value="4.38757242489562E-06" />
+      <inertia
+        ixx="1.89756037081267E-12"
+        ixy="5.06471855932574E-28"
+        ixz="4.5203839485621E-43"
+        iyy="3.0638586708094E-12"
+        iyz="2.6102017677249E-28"
+        izz="1.89756037081267E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/dummy_with_out_tool.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/dummy_with_out_tool.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dummy_1_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0938244 0"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="link6" />
+    <child
+      link="dummy_with_out_tool" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="dummy_with_tool">
+    <inertial>
+      <origin
+        xyz="-6.07597235231416E-14 -0.00999999999987444 1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="4.38757242489513E-06" />
+      <inertia
+        ixx="1.89756037081238E-12"
+        ixy="-5.06471855932543E-28"
+        ixz="-2.12907918298444E-43"
+        iyy="3.06385867080906E-12"
+        iyz="4.76720308320444E-28"
+        izz="1.89756037081238E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/dummy_with_tool.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FullSimV7/meshes/dummy_with_tool.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dummy_2_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.106 0"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="dummy_with_out_tool" />
+    <child
+      link="dummy_with_tool" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

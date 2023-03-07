@@ -1,0 +1,8 @@
+prefix=/home/ebrahim/ABB-IRB120-Coppeliasim-Moveit-Simulation/devel/.private/FullSimV7
+
+Name: FullSimV7
+Description: Description of FullSimV7
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

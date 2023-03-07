@@ -1,0 +1,22 @@
+controller_list:
+  - name: fake_tooless_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+  - name: fake_tooled_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+initial:  # Define initial robot poses per group
+  - group: tooless
+    pose: home
